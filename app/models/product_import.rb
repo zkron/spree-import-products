@@ -133,7 +133,7 @@ class ProductImport < ActiveRecord::Base
 
       #Finally, attach any images that have been specified
       IMPORT_PRODUCT_SETTINGS[:image_fields].each do |field|
-        find_and_attach_image_to(variant, options[:with][field.to_sym])
+        find_and_attach_image_to(product, options[:with][field.to_sym])
       end
 
       #Log a success message
